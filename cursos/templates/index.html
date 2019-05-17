@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Bienvenido al Sistema de Gestión Curricular Asiatica</h1>
+<br/>
+<br/>
+{% if not user.is_authenticated %}
+  <p>Para acceder al sistema debes ingresar tu usario y clave o registrarte.</p>
+{% endif %}
+{% endblock %}

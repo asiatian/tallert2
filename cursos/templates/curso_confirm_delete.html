@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="jumbotron">
+  <h1 class="display-4">{{curso.sigla}}</h1>
+  <p class="lead">{{curso.nombre}}</p>
+  <hr class="my-4">
+  <p>{{curso.creditos}} creditos</p>
+  <p>¿Desea borrar el curso?</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Confirmar borrado</button>
+  </form>
+</div>
+{% endblock %}

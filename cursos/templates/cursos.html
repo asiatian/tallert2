@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<h1>Cursos dictados este semstre</h1>
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    {% for curso in cursos %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-tittle">{{cursp.sigla}}</h5>
+        <p class="card-text"> {{curso.nombre}} </p>
+        <a href="/curso/{{curso.sigla}}/" class="card-link">Ir</a>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+<a class="btn btn-primary btn-lg" href="/curso/create" role="buton">Agregar Curso</a>
+</div>
+{% endblock %}
